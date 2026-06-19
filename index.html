@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Little Vault</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="lock-screen" id="lockScreen" aria-labelledby="lockTitle">
+        <div class="lock-art" aria-hidden="true">
+          <span class="ring ring-one"></span>
+          <span class="ring ring-two"></span>
+          <span class="ring ring-three"></span>
+          <div class="photo-stack">
+            <div class="mini-photo one"></div>
+            <div class="mini-photo two"></div>
+            <div class="mini-photo three"></div>
+          </div>
+        </div>
+        <div class="lock-panel">
+          <p class="kicker" id="lockMode">Private memory vault</p>
+          <h1 id="lockTitle">Only us.</h1>
+          <p class="lock-copy" id="lockCopy">
+            Set a passcode the first time you open this. After that, this page keeps the letters, photos, and song behind the lock on this browser.
+          </p>
+          <form id="lockForm" class="lock-form">
+            <label for="passcodeInput">Passcode</label>
+            <div class="pass-row">
+              <input id="passcodeInput" name="passcode" type="password" autocomplete="current-password" minlength="3" placeholder="Make it something only you know" required>
+              <button class="unlock-button" type="submit" id="unlockButton">
+                <span class="unlock-icon" aria-hidden="true"><span></span></span>
+                <span class="unlock-label">Unlock</span>
+              </button>
+            </div>
+            <p class="hint" id="lockHint">Tip: use a private memory, not a real account password.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="vault hidden" id="vault" aria-label="Unlocked memory vault">
+        <header class="vault-header">
+          <div>
+            <p class="kicker">Unlocked</p>
+            <h1>Our Little Vault</h1>
+          </div>
+          <button class="ghost-button" id="lockAgainButton" type="button">Lock</button>
+        </header>
+
+        <div id="homeView">
+          <section class="hero-memory" aria-label="Main memory">
+            <div class="hero-copy">
+              <p class="kicker">For the songs, letters, and soft proof</p>
+              <h2>All the pieces that still feel like us.</h2>
+              <p>
+                Songs, letters, photos, and the little proofs that belong to us.
+              </p>
+            </div>
+            <div class="now-playing" id="playerCard">
+              <div class="disc" aria-hidden="true"></div>
+              <div class="player-info">
+                <span>Song</span>
+                <strong id="songName">No song added yet</strong>
+              </div>
+              <audio id="audioPlayer" controls></audio>
+            </div>
+          </section>
+
+          <section class="content-grid">
+            <article class="panel letters-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="kicker">Letters</p>
+                  <h2>Choose a folder</h2>
+                </div>
+              </div>
+              <div class="folder-grid" id="letterList"></div>
+            </article>
+
+            <article class="panel gallery-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="kicker">Photos</p>
+                  <h2>Little pieces of proof</h2>
+                </div>
+              </div>
+              <div class="photo-grid" id="photoGrid"></div>
+            </article>
+          </section>
+        </div>
+
+        <section class="letter-room hidden" id="letterRoom" aria-label="Letter room">
+          <button class="back-button" id="backToFolders" type="button">Back to folders</button>
+          <div class="room-heading">
+            <p class="kicker" id="roomKicker">Letters</p>
+            <h2 id="roomTitle">Letters</h2>
+            <p id="roomCopy">Tap any letter to open the PDF.</p>
+          </div>
+          <div class="pdf-icon-grid" id="letterRoomGrid"></div>
+        </section>
+      </section>
+    </main>
+
+    <template id="letterTemplate">
+      <button class="letter-person-card" type="button">
+        <span class="folder-icon" aria-hidden="true"></span>
+        <span class="letter-badge"></span>
+        <strong class="letter-title"></strong>
+        <small class="letter-count"></small>
+      </button>
+    </template>
+
+    <template id="photoTemplate">
+      <figure class="photo-card">
+        <img alt="Memory photo">
+        <figcaption></figcaption>
+      </figure>
+    </template>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
