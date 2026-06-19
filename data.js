@@ -34,25 +34,25 @@ window.LOVE_VAULT_DATA = {
       pdfUrl: "assets/letters/2026-04/shazee-letter-2.pdf"
     },
     {
-      id: "ally-letter-1",
+      id: "ally-Ally's diary",
       type: "hers",
       mode: "pdf",
-      title: "A letter from Ally",
-      date: "March 2026",
-      month: "March 2026",
+      title: "Ally's diary",
+      date: "March 29, 2026",
+      month: "March 29, 2026",
       body: "",
       // Upload a PDF into assets/letters and change this path.
-      pdfUrl: "assets/letters/2026-03/ally-letter-1.pdf"
+      pdfUrl: "assets/letters/Ally's diary.pdf"
     },
     {
-      id: "ally-letter-2",
+      id: "ally-1st letter from Ally",
       type: "hers",
       mode: "pdf",
-      title: "Another letter from Ally",
-      date: "April 2026",
-      month: "April 2026",
+      title: "1st letter from Ally",
+      date: "May 20, 2026",
+      month: "May 20, 2026",
       body: "",
-      pdfUrl: "assets/letters/2026-04/ally-letter-2.pdf"
+      pdfUrl: "assets/letters/1st letter from Ally.pdf"
     }
   ],
 
