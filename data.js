@@ -4,9 +4,8 @@ window.LOVE_VAULT_DATA = {
   passcode: "03202026",
   passcodes: ["03202026", "03/20/2026", "march 20 2026", "march 20, 2026"],
 
-  title: "Our Little Vault",
-  heroTitle: "All the pieces that still feel like us.",
-  heroText: "Songs, letters, photos, and the little proofs that belong to us.",
+  title: "Our Little World",
+  heroTitle: "Let's reminisce and cherish the beautiful memories we've made together here",
 
   song: {
     name: "Can't Help Falling In Love",
@@ -107,7 +106,7 @@ window.LOVE_VAULT_DATA = {
     {
       id: "memory-2026-05-09",
       src: "assets/photos/memory-2026-05-09.jpg",
-      caption: "May 9, 2026"
+      caption: "Being delulu together"
     }
   ]
 };

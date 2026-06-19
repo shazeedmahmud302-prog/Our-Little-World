@@ -2,9 +2,8 @@ const siteData = window.LOVE_VAULT_DATA || {};
 const state = {
   passcode: siteData.passcode || "03202026",
   passcodes: siteData.passcodes || [],
-  title: siteData.title || "Our Little Vault",
-  heroTitle: siteData.heroTitle || "All the pieces that still feel like us.",
-  heroText: siteData.heroText || "Songs, letters, photos, and the little proofs that belong to us.",
+  title: siteData.title || "Our Little World",
+  heroTitle: siteData.heroTitle || "Let's reminisce and cherish the beautiful memories we've made together here",
   song: siteData.song || null,
   songs: normalizeSongs(siteData.songs, siteData.song),
   letters: normalizeLetters(siteData.letters),
