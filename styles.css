@@ -430,6 +430,60 @@ audio {
   width: 100%;
 }
 
+.playlist {
+  display: grid;
+  gap: 8px;
+  max-height: 220px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.playlist-item {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 28px 1fr;
+  min-height: 52px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.playlist-item span {
+  align-items: center;
+  background: rgba(232, 112, 141, 0.12);
+  border-radius: 999px;
+  color: var(--rose);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 900;
+  height: 28px;
+  justify-content: center;
+  width: 28px;
+}
+
+.playlist-item strong,
+.playlist-item small {
+  grid-column: 2;
+}
+
+.playlist-item strong {
+  font-size: 0.9rem;
+}
+
+.playlist-item small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: -7px;
+}
+
+.playlist-item.active {
+  background: linear-gradient(135deg, rgba(255, 225, 232, 0.84), rgba(255, 245, 217, 0.82));
+  border-color: rgba(232, 112, 141, 0.3);
+}
+
 .content-grid {
   display: grid;
   gap: 18px;

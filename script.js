@@ -6,6 +6,7 @@ const state = {
   heroTitle: siteData.heroTitle || "All the pieces that still feel like us.",
   heroText: siteData.heroText || "Songs, letters, photos, and the little proofs that belong to us.",
   song: siteData.song || null,
+  songs: normalizeSongs(siteData.songs, siteData.song),
   letters: normalizeLetters(siteData.letters),
   photos: normalizePhotos(siteData.photos)
 };
@@ -34,6 +35,8 @@ const photoGrid = document.querySelector("#photoGrid");
 const audioPlayer = document.querySelector("#audioPlayer");
 const songName = document.querySelector("#songName");
 const playerCard = document.querySelector("#playerCard");
+const playlist = document.querySelector("#playlist");
+let currentSongIndex = 0;
 
 document.title = state.title;
 document.querySelector(".vault-header h1").textContent = state.title;
@@ -214,17 +217,42 @@ function renderPhotos() {
 }
 
 function renderSong() {
-  if (!state.song || !state.song.src) {
+  if (!state.songs.length) {
     songName.textContent = "No song added yet";
     audioPlayer.removeAttribute("src");
     audioPlayer.load();
     playerCard.classList.add("no-song");
+    playlist.innerHTML = "";
     return;
   }
 
   playerCard.classList.remove("no-song");
-  songName.textContent = state.song.name || "Our song";
-  audioPlayer.src = state.song.src;
+  const currentSong = state.songs[currentSongIndex] || state.songs[0];
+  songName.textContent = currentSong.artist ? `${currentSong.name} - ${currentSong.artist}` : currentSong.name;
+  audioPlayer.src = currentSong.src;
+  renderPlaylist();
+}
+
+function renderPlaylist() {
+  playlist.innerHTML = "";
+  state.songs.forEach((song, index) => {
+    const button = document.createElement("button");
+    button.className = `playlist-item ${index === currentSongIndex ? "active" : ""}`;
+    button.type = "button";
+    button.innerHTML = `
+      <span>${index + 1}</span>
+      <strong></strong>
+      <small></small>
+    `;
+    button.querySelector("strong").textContent = song.name;
+    button.querySelector("small").textContent = song.artist || "Our song";
+    button.addEventListener("click", () => {
+      currentSongIndex = index;
+      renderSong();
+      audioPlayer.play().catch(() => {});
+    });
+    playlist.append(button);
+  });
 }
 
 function emptyState(message) {
@@ -253,4 +281,13 @@ function normalizePhotos(photos = []) {
     src: photo.src || "",
     caption: photo.caption || ""
   })).filter((photo) => photo.src);
+}
+
+function normalizeSongs(songs = [], fallbackSong = null) {
+  const list = songs.length ? songs : (fallbackSong ? [fallbackSong] : []);
+  return list.map((song) => ({
+    name: song.name || "Our song",
+    artist: song.artist || "",
+    src: song.src || ""
+  })).filter((song) => song.src);
 }

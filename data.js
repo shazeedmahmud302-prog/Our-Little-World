@@ -8,56 +8,96 @@ window.LOVE_VAULT_DATA = {
   heroTitle: "All the pieces that still feel like us.",
   heroText: "Songs, letters, photos, and the little proofs that belong to us.",
 
-  // Put your song in assets/music and set src, for example:
-  // song: { name: "Our song", src: "assets/music/our-song.mp3" },
-  song: null,
+  song: {
+    name: "Can't Help Falling In Love",
+    src: "assets/music/cant-help-falling-in-love.mp3"
+  },
+
+  songs: [
+    {
+      name: "Can't Help Falling In Love",
+      artist: "Elvis Presley",
+      src: "assets/music/cant-help-falling-in-love.mp3"
+    },
+    {
+      name: "I Think They Call This Love",
+      artist: "Elliot James Reay",
+      src: "assets/music/i-think-they-call-this-love.mp3"
+    },
+    {
+      name: "Perfect",
+      artist: "Ed Sheeran",
+      src: "assets/music/perfect-ed-sheeran.mp3"
+    },
+    {
+      name: "Tahanan",
+      artist: "El Manu",
+      src: "assets/music/tahanan-el-manu.mp3"
+    },
+    {
+      name: "There Is a Light That Never Goes Out",
+      artist: "The Smiths",
+      src: "assets/music/there-is-a-light-that-never-goes-out.mp3"
+    },
+    {
+      name: "Until I Found You",
+      artist: "Stephen Sanchez ft. Em Beihold",
+      src: "assets/music/until-i-found-you.mp3"
+    }
+  ],
 
   letters: [
     {
-      id: "shazee-letter-1",
-      type: "mine",
-      mode: "pdf",
-      title: "A letter from Shazee",
-      date: "March 20, 2026",
-      month: "March 2026",
-      body: "",
-      pdfUrl: "assets/letters/2026-03/shazee-letter-1.pdf"
-    },
-    {
-      id: "shazee-letter-2",
-      type: "mine",
-      mode: "pdf",
-      title: "Another letter from Shazee",
-      date: "April 2026",
-      month: "April 2026",
-      body: "",
-      pdfUrl: "assets/letters/2026-04/shazee-letter-2.pdf"
-    },
-    {
-      id: "ally-Ally's diary",
+      id: "allys-diary",
       type: "hers",
       mode: "pdf",
-      title: "ally_diary",
+      title: "Ally's Diary",
       date: "March 29, 2026",
-      month: "March 29, 2026",
+      month: "March 2026",
       body: "",
-      // Upload a PDF into assets/letters and change this path.
-      pdfUrl: "assets/letters/.pdf"
+      pdfUrl: "assets/letters/allys-diary.pdf"
     },
     {
-      id: "ally-1st letter from Ally",
+      id: "ally-first-letter",
       type: "hers",
       mode: "pdf",
       title: "1st letter from Ally",
       date: "May 20, 2026",
-      month: "May 20, 2026",
+      month: "May 2026",
       body: "",
-      pdfUrl: "assets/letters/1st_letter_from_ally.pdf"
+      pdfUrl: "assets/letters/ally-first-letter.pdf"
     }
+
+    // Add future letters above this line.
+    // Shazee example:
+    // {
+    //   id: "shazee-june-2026",
+    //   type: "mine",
+    //   mode: "pdf",
+    //   title: "June letter from Shazee",
+    //   date: "June 20, 2026",
+    //   month: "June 2026",
+    //   body: "",
+    //   pdfUrl: "assets/letters/shazee-june-2026.pdf"
+    // },
+    // Ally example:
+    // {
+    //   id: "ally-june-2026",
+    //   type: "hers",
+    //   mode: "pdf",
+    //   title: "June letter from Ally",
+    //   date: "June 20, 2026",
+    //   month: "June 2026",
+    //   body: "",
+    //   pdfUrl: "assets/letters/ally-june-2026.pdf"
+    // },
   ],
 
   photos: [
-    // Example after you add files:
-    // { id: "us-1", src: "assets/photos/us-1.jpg", caption: "That day" }
+    {
+      id: "memory-2026-05-09",
+      src: "assets/photos/memory-2026-05-09.jpg",
+      caption: "May 9, 2026"
+    }
   ]
 };
