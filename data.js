@@ -37,12 +37,12 @@ window.LOVE_VAULT_DATA = {
       id: "ally-Ally's diary",
       type: "hers",
       mode: "pdf",
-      title: "Ally's diary",
+      title: "ally_diary",
       date: "March 29, 2026",
       month: "March 29, 2026",
       body: "",
       // Upload a PDF into assets/letters and change this path.
-      pdfUrl: "assets/letters/Ally's diary.pdf"
+      pdfUrl: "assets/letters/.pdf"
     },
     {
       id: "ally-1st letter from Ally",
@@ -52,7 +52,7 @@ window.LOVE_VAULT_DATA = {
       date: "May 20, 2026",
       month: "May 20, 2026",
       body: "",
-      pdfUrl: "assets/letters/1st letter from Ally.pdf"
+      pdfUrl: "assets/letters/1st_letter_from_ally.pdf"
     }
   ],
 
