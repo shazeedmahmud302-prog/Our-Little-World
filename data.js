@@ -61,11 +61,21 @@ window.LOVE_VAULT_DATA = {
       id: "ally-first-letter",
       type: "hers",
       mode: "pdf",
-      title: "1st letter from Ally",
+      title: "1st letter",
       date: "May 20, 2026",
       month: "May 2026",
       body: "",
       pdfUrl: "assets/letters/ally-first-letter.pdf"
+    },
+    {
+      id: "shazee-second-letter",
+      type: "mine",
+      mode: "pdf",
+      title: "2nd letter",
+      date: "June 11, 2026",
+      month: "June 2026",
+      body: "",
+      pdfUrl: "assets/letters/shazee-second-letter.pdf"
     }
 
     // Add future letters above this line.
