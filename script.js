@@ -53,7 +53,7 @@ lockForm.addEventListener("submit", (event) => {
   if (isCorrectPasscode(passcode)) {
     unlock();
   } else {
-    lockHint.textContent = "Wrong passcode. Try the memory again.";
+    lockHint.textContent = "Shibal Ally!!! How can you forget huh! I am TEMPO!!!";
     passcodeInput.select();
   }
 });
@@ -69,10 +69,10 @@ lockAgainButton.addEventListener("click", () => {
 backToFolders.addEventListener("click", showHome);
 
 function setLockMode() {
-  lockMode.textContent = "Private memory vault";
+  lockMode.textContent = "PRIVATE MEMORY VAULT";
   unlockLabel.textContent = "Open Vault";
-  lockCopy.textContent = "Enter the passcode to open the memories.";
-  lockHint.textContent = "Only the two of you should know this.";
+  lockCopy.textContent = "";
+  lockHint.textContent = "Hint: When did we first meet???";
 }
 
 function isCorrectPasscode(passcode) {
@@ -141,8 +141,8 @@ function renderAll() {
 function renderFolders() {
   letterList.innerHTML = "";
   const people = [
-    { type: "mine", name: "Shazee", label: "Letters from Shazee" },
-    { type: "hers", name: "Ally", label: "Letters from Ally" }
+    { type: "hers", name: "Ally", label: "Letters from Ally" },
+    { type: "mine", name: "Shazee", label: "Letters from Shazee" }
   ];
 
   people.forEach((person) => {

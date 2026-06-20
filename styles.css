@@ -655,7 +655,7 @@ audio {
 
 .room-heading h2 {
   font-size: clamp(2.3rem, 7vw, 5.6rem);
-  line-height: 0.92;
+  line-height: 0.9;
   margin: 10px 0 4px;
 }
 
