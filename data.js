@@ -77,6 +77,16 @@ window.LOVE_VAULT_DATA = {
       pdfUrl: "assets/letters/ally-second-letter.pdf"
     },
     {
+      id: "shazee-first-letter",
+      type: "mine",
+      mode: "pdf",
+      title: "1st letter",
+      date: "April 20, 2026",
+      month: "April 2026",
+      body: "",
+      pdfUrl: "assets/letters/shazee-first-letter.pdf"
+    },
+    {
       id: "shazee-second-letter",
       type: "mine",
       mode: "pdf",
