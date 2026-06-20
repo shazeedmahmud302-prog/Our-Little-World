@@ -29,6 +29,11 @@ window.LOVE_VAULT_DATA = {
       src: "assets/music/perfect-ed-sheeran.mp3"
     },
     {
+      name: "Someday",
+      artist: "The Ridleys",
+      src: "assets/music/someday.mp3"
+    },
+    {
       name: "Tahanan",
       artist: "El Manu",
       src: "assets/music/tahanan-el-manu.mp3"
