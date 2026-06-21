@@ -100,7 +100,18 @@ window.LOVE_VAULT_DATA = {
       month: "June 2026",
       body: "",
       pdfUrl: "assets/letters/shazee-second-letter.pdf"
+    },
+    {
+      id: "shazee-third-letter",
+      type: "mine",
+      mode: "pdf",
+      title: "3rd letter",
+      date: "June 20, 2026",
+      month: "June 2026",
+      body: "",
+      pdfUrl: "assets/letters/shazee-third-letter.pdf"
     }
+
 
     // Add future letters above this line.
     // Shazee example:
